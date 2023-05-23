@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="story"
+            type="com.example.mystoryapplicationcourses.data.utils.Story" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/purple_700"
+        app:cardCornerRadius="12dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_item_photo"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:contentDescription="@string/image_detail"
+                android:scaleType="centerCrop"
+                android:transitionName="@{@string/storyImage(String.valueOf(story.id))}"
+                app:loadImage="@{story.photoUrl}"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#AA000000"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="@{story.name}"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:transitionName="@{@string/storyName(String.valueOf(story.id))}"
+                    tools:text="Name" />
+
+                <TextView
+                    android:id="@+id/tv_story_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/holo_red_light"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:padding="10dp"
+                    android:text="@{story.description}"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:transitionName="@{@string/storyDescription(String.valueOf(story.id))}"
+                    tools:text="Description" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

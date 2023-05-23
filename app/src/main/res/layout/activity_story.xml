@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.story.list.ListStoryActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/storyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:contentDescription="@string/fab_popUP"
+        android:backgroundTint="#000"
+        android:layout_gravity="bottom|end"
+        app:tint="@color/white"
+        android:src="@drawable/baseline_popup_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fabSize="normal"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="110dp"
+        android:contentDescription="@string/fab_tambah"
+        android:layout_marginEnd="40dp"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="#32a852"
+        android:visibility="invisible"
+        app:tint="@color/white"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="165dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/fab_keluar"
+        android:backgroundTint="#a8326b"
+        app:tint="@color/white"
+        android:src="@drawable/ic_baseline_logout_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="218dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/fab_map"
+        android:backgroundTint="#fcba03"
+        app:tint="@color/white"
+        android:src="@drawable/ic_baseline_map_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        app:fabSize="mini"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

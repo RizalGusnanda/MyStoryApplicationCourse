@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+
+    <dimen name="default_margin_main">16dp</dimen>
+    <dimen name="text_size_large_main">28sp</dimen>
+    <dimen name="button_corner_radius_main">15dp</dimen>
+    <dimen name="button_margin_top">32dp</dimen>
+
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="standard_55">10dp</dimen>
+    <dimen name="standard_105">10dp</dimen>
+
+</resources>
